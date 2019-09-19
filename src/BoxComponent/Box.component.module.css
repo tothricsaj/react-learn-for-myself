@@ -1,0 +1,11 @@
+.wrapperBox {
+    width: 150px;
+    height: 500px;
+    padding: 5px;
+    border: 1px solid orange;
+}
+
+.h2Class {
+    color: orange;
+    text-decoration: underline;
+}
