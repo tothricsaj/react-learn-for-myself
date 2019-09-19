@@ -1,6 +1,7 @@
 .wrapperBox {
-    width: 150px;
+    width: 550px;
     height: 500px;
+    margin: 30px 30px;
     padding: 5px;
     border: 1px solid orange;
 }

@@ -4,6 +4,7 @@
   text-align: center;
   background-color: #282c34;
   position: relative;
+  overflow: hidden;
 }
 
 .App-logo {
