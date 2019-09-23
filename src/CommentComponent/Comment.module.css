@@ -1,0 +1,14 @@
+img {
+    width: 100%;
+}
+
+.wrapper {
+    width: 150px;
+    border-bottom: 1px solid orange;
+    color: orange;
+}
+
+.date {
+    color: #61dafb;
+
+}

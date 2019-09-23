@@ -3,7 +3,7 @@ import styles from './Box.module.css'; // important --> only dot and module and 
 
 class BoxComponent extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
 
     render() {
