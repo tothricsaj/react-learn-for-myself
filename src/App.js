@@ -5,7 +5,8 @@ import BoxComponent from './BoxComponent/Box.component';
 function App() {
   return (
     <div className="App">
-      <BoxComponent />
+      <BoxComponent msg='Hello my friend!' />
+      <BoxComponent msg='Dogy, kitty, mesaure failure!' />
     </div>
   );
 }
