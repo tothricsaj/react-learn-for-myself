@@ -1,5 +1,5 @@
 import React from 'react'
-import Avatar from '../AvatarComponent/Avatar.component';
+import UserInfo from '../UserInfoComponent/UserInfo.component';
 import styles from './Comment.module.css';
 
 class Comment extends React.Component {
@@ -10,9 +10,7 @@ class Comment extends React.Component {
     render() {
         return(
             <div className={styles.wrapper}>
-                <Avatar user={this.props.author} />
-                <h4>{this.props.author.name}</h4>
-                <p>{this.props.txt}</p>
+                <UserInfo author={this.props.author} txt={this.props.txt}/>
                 <p className={styles.date}>{this.props.date}</p>
             </div>
         )
