@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import BoxComponent from './BoxComponent/Box.component';
 import Comment from './CommentComponent/Comment.component'
+import Clock from './ClockComponent/Clock.component';
 
 let commentData = {
     author: {
@@ -23,6 +24,7 @@ function App() {
           txt={commentData.txt}
           date={commentData.date}
       />
+      <Clock />
     </div>
   );
 }
