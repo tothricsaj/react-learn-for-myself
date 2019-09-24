@@ -6,7 +6,7 @@ import Comment from './CommentComponent/Comment.component'
 let commentData = {
     author: {
         name: 'Test User',
-        imgUrl: 'https://images.pexels.com/photos/2146042/pexels-photo-2146042.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+        imgUrl: 'https://images.pexels.com/photos/2146042/pexels-photo-2146042.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100'
     },
     txt: 'Test comment',
     date: new Date().toLocaleDateString()
