@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import VisibleMenu from './MenuComponent/VisibleMenu/Visible.menu';
 import BoxComponent from './BoxComponent/Box.component';
 import Comment from './CommentComponent/Comment.component'
 import Clock from './ClockComponent/Clock.component';
@@ -16,6 +17,7 @@ let commentData = {
 function App() {
   return (
     <div className="App">
+      <VisibleMenu />
       <BoxComponent msg='Hello my friend!' />
       <BoxComponent msg='Mesaure failure!' />
       <hr/>
