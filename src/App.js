@@ -15,21 +15,44 @@ let commentData = {
     date: new Date().toLocaleDateString()
 };
 
-function App() {
-  return (
-    <div className="App">
-        <HiddenMenu />
-      <BoxComponent msg='Hello my friend!' />
-      <BoxComponent msg='Mesaure failure!' />
-      <hr/>
-      <Comment
-          author={commentData.author}
-          txt={commentData.txt}
-          date={commentData.date}
-      />
-      <Clock />
-    </div>
-  );
+class App extends React.Component{
+    constructor(props) {
+        super(props);
+        this.toggleMenu = this.toggleMenu.bind(this);
+        this.state = {
+            isMenuVisible: false
+        };
+    }
+
+    toggleMenu() {
+        this.setState({isMenuVisible: !this.state.isMenuVisible})
+    }
+
+    render() {
+        const isMenu = this.state.isMenuVisible;
+        let menu;
+
+        if(isMenu) {
+            menu = <VisibleMenu onClick={this.toggleMenu} />
+        } else {
+            menu = <HiddenMenu onClick={this.toggleMenu} />;
+        }
+
+        return (
+            <div className="App">
+                {menu}
+                <BoxComponent msg='Hello my friend!' />
+                <BoxComponent msg='Mesaure failure!' />
+                <hr/>
+                <Comment
+                    author={commentData.author}
+                    txt={commentData.txt}
+                    date={commentData.date}
+                />
+                <Clock />
+            </div>
+      );
+    }
 }
 
 export default App;

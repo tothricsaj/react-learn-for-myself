@@ -2,12 +2,19 @@ import React from 'react';
 import styles from  './Visible.module.css';
 
 class VisibleMenu extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         return(
             <div className={styles.wrapper}>
                 <ul>
-                    <p className={styles.exit}>X</p>
+                    <p className={styles.exit}
+                       onClick={this.props.onClick}
+                    >
+                        X
+                    </p>
                     <li>Home</li>
                     <li>Blog</li>
                     <li>Contact</li>
