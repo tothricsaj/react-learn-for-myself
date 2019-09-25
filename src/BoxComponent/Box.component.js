@@ -6,8 +6,10 @@ class BoxComponent extends React.Component {
         super(props);
 
         this.handleClick = this.handleClick.bind(this);
+        this.showTheBox = this.showTheBox.bind(this);
         this.state = {
             isToggleOn: true,
+            isHidedd: true,
         }
     }
 
@@ -17,11 +19,22 @@ class BoxComponent extends React.Component {
         }));
     }
 
+    showTheBox() {
+        this.setState({isHidedd: !this.state.isHidedd})
+    }
+
     render() {
-        return <div className={ styles.wrapperBox }>
-            <h2 className={ styles.h2Class }>{ this.props.msg }</h2>
-            <div className={styles.buttonDiv} onClick={this.handleClick}>{this.state.isToggleOn? ':)' : ':('}</div>
+        return (
+        <div className={ styles.wrapperBox }>
+            {!this.state.isHidedd &&
+                <div>
+                    <h2 className={ styles.h2Class }>{ this.props.msg }</h2>
+                    <div className={styles.buttonDiv} onClick={this.handleClick}>{this.state.isToggleOn? ':)' : ':('}</div>
+                </div>
+            }
+            <div className={styles.showBox} onClick={this.showTheBox}>{this.state.isHidedd ? 'Show' : 'Hide'}</div>
         </div>
+        )
     }
 }
 
