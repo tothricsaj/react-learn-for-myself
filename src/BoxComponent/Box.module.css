@@ -4,9 +4,20 @@
     margin: 30px 30px;
     padding: 5px;
     border: 1px solid orange;
+    position: relative;
 }
 
 .h2Class {
     color: orange;
     text-decoration: underline;
+}
+
+.buttonDiv {
+    width: 50px;
+    height: 25px;
+    border: 1px solid orange;
+    position: absolute;
+    bottom: 5px;
+    left: 40px;
+    cursor: pointer;
 }
