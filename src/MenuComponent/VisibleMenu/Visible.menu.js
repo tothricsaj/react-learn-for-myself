@@ -10,6 +10,7 @@ class VisibleMenu extends React.Component {
         return(
             <div className={styles.wrapper}>
                 <ul>
+                    <p className={styles.exit}>X</p>
                     <li>Home</li>
                     <li>Blog</li>
                     <li>Contact</li>
