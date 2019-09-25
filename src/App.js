@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <BoxComponent msg='Hello my friend!' />
-      <BoxComponent msg='Dogy, kitty, mesaure failure!' />
+      <BoxComponent msg='Mesaure failure!' />
       <hr/>
       <Comment
           author={commentData.author}
