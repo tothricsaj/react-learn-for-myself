@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import HiddenMenu from './MenuComponent/HiddenMenu/Hidden.menu';
 import VisibleMenu from './MenuComponent/VisibleMenu/Visible.menu';
 import BoxComponent from './BoxComponent/Box.component';
 import Comment from './CommentComponent/Comment.component'
@@ -17,7 +18,7 @@ let commentData = {
 function App() {
   return (
     <div className="App">
-      <VisibleMenu />
+        <HiddenMenu />
       <BoxComponent msg='Hello my friend!' />
       <BoxComponent msg='Mesaure failure!' />
       <hr/>

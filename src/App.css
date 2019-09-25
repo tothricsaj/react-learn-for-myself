@@ -1,6 +1,7 @@
 .App {
   width: 100vw;
   height: 100vh;
+  padding-top: 30px;
   text-align: center;
   background-color: #282c34;
   position: relative;

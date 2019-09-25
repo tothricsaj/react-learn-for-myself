@@ -2,9 +2,6 @@ import React from 'react';
 import styles from  './Visible.module.css';
 
 class VisibleMenu extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return(
