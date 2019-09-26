@@ -29,8 +29,11 @@ class BoxComponent extends React.Component {
             {!this.state.isHidedd &&
                 <div>
                     <h2 className={ styles.h2Class }>{ this.props.msg }</h2>
-                    {this.state.isToggleOn &&
+                    {this.state.isToggleOn ? (
                         <p>I am alive....</p>
+                    ) : (
+                        <p className={styles.diedTxt}>I am died....</p>
+                    )
                     }
                     <div className={styles.buttonDiv} onClick={this.handleClick}>{this.state.isToggleOn? ':)' : ':('}</div>
                 </div>

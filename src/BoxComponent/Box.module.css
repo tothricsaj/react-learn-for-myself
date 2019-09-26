@@ -28,3 +28,8 @@
     right: -55px;
     bottom: -1px;
 }
+
+.diedTxt {
+    color: red;
+    background: black;
+}
