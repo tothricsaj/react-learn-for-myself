@@ -36,15 +36,6 @@ let commentData = [
     },
 ];
 
-const comments = commentData.map((data) => {
-    return <Comment
-        author={data.author}
-        txt={data.txt}
-        date={data.date}
-        key={data.key}
-    />
-});
-
 class App extends React.Component{
     constructor(props) {
         super(props);
@@ -75,7 +66,16 @@ class App extends React.Component{
                 <BoxComponent msg='Mesaure failure!' />
                 <hr/>
                 <ul className="commentLister">
-                    {comments}
+                    {
+                        commentData.map((data) => {
+                        return <Comment
+                            author={data.author}
+                            txt={data.txt}
+                            date={data.date}
+                            key={data.key}
+                        />
+                        })
+                    }
                 </ul>
                 <Clock />
             </div>
