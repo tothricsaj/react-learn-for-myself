@@ -9,10 +9,10 @@ class Comment extends React.Component {
 
     render() {
         return(
-            <div className={styles.wrapper}>
+            <li className={styles.wrapper}>
                 <UserInfo author={this.props.author} txt={this.props.txt}/>
                 <p className={styles.date}>{this.props.date}</p>
-            </div>
+            </li>
         )
     }
 }

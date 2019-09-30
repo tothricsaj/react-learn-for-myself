@@ -6,14 +6,44 @@ import BoxComponent from './BoxComponent/Box.component';
 import Comment from './CommentComponent/Comment.component'
 import Clock from './ClockComponent/Clock.component';
 
-let commentData = {
-    author: {
-        name: 'Test User',
-        imgUrl: 'https://images.pexels.com/photos/2146042/pexels-photo-2146042.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100'
+let commentData = [
+     {
+        author: {
+            name: 'Test User',
+            imgUrl: 'https://images.pexels.com/photos/2146042/pexels-photo-2146042.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100'
+        },
+        txt: 'Test comment',
+        date: new Date().toLocaleDateString(),
+        key: 1
     },
-    txt: 'Test comment',
-    date: new Date().toLocaleDateString()
-};
+    {
+        author: {
+            name: 'Süni',
+            imgUrl: 'https://images.pexels.com/photos/2146032/pexels-photo-2146032.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100'
+        },
+        txt: 'Test comment adfadfadf',
+        date: new Date().toLocaleDateString(),
+        key: 2
+    },
+     {
+        author: {
+            name: 'Kistücsök',
+            imgUrl: 'https://images.pexels.com/photos/2146022/pexels-photo-2146022.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100'
+        },
+        txt: 'foo bar',
+        date: new Date().toLocaleDateString(),
+        key: 3
+    },
+];
+
+const comments = commentData.map((data) => {
+    return <Comment
+        author={data.author}
+        txt={data.txt}
+        date={data.date}
+        key={data.key}
+    />
+});
 
 class App extends React.Component{
     constructor(props) {
@@ -44,11 +74,9 @@ class App extends React.Component{
                 <BoxComponent msg='Hello my friend!' />
                 <BoxComponent msg='Mesaure failure!' />
                 <hr/>
-                <Comment
-                    author={commentData.author}
-                    txt={commentData.txt}
-                    date={commentData.date}
-                />
+                <ul>
+                    {comments}
+                </ul>
                 <Clock />
             </div>
       );
