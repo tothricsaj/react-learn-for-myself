@@ -5,6 +5,7 @@ import VisibleMenu from './MenuComponent/VisibleMenu/Visible.menu';
 import BoxComponent from './BoxComponent/Box.component';
 import Comment from './CommentComponent/Comment.component'
 import Clock from './ClockComponent/Clock.component';
+import NameForm from './NameFormComponent/NameForm.component';
 
 let commentData = [
      {
@@ -78,6 +79,7 @@ class App extends React.Component{
                     }
                 </ul>
                 <Clock />
+                <NameForm />
             </div>
       );
     }
