@@ -74,7 +74,7 @@ class App extends React.Component{
                 <BoxComponent msg='Hello my friend!' />
                 <BoxComponent msg='Mesaure failure!' />
                 <hr/>
-                <ul>
+                <ul className="commentLister">
                     {comments}
                 </ul>
                 <Clock />

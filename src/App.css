@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.commentLister {
+  width: 400px;
+  height: 400px;
+  overflow-y: scroll;
+  display: block;
+  margin-left: 150px;
+}
