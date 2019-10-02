@@ -6,6 +6,7 @@ import BoxComponent from './BoxComponent/Box.component';
 import Comment from './CommentComponent/Comment.component'
 import Clock from './ClockComponent/Clock.component';
 import NameForm from './NameFormComponent/NameForm.component';
+import TemperatureApp from './TemperatureAppComponent/TemperatureApp';
 
 let commentData = [
      {
@@ -63,6 +64,7 @@ class App extends React.Component{
         return (
             <div className="App">
                 {menu}
+                <div className="tempAppBtn">Temperature App</div>
                 <BoxComponent msg='Hello my friend!' />
                 <BoxComponent msg='Mesaure failure!' />
                 <hr/>
