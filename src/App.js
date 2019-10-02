@@ -42,13 +42,19 @@ class App extends React.Component{
     constructor(props) {
         super(props);
         this.toggleMenu = this.toggleMenu.bind(this);
+        this.toggleTempApp = this.toggleTempApp.bind(this);
         this.state = {
-            isMenuVisible: false
+            isMenuVisible: false,
+            isTempAppVisible: false,
         };
     }
 
     toggleMenu() {
-        this.setState({isMenuVisible: !this.state.isMenuVisible})
+        this.setState({isMenuVisible: !this.state.isMenuVisible});
+    }
+
+    toggleTempApp() {
+        this.setState({isTempAppVisible: !this.state.isTempAppVisible});
     }
 
     render() {
@@ -64,24 +70,31 @@ class App extends React.Component{
         return (
             <div className="App">
                 {menu}
-                <div className="tempAppBtn">Temperature App</div>
-                <BoxComponent msg='Hello my friend!' />
-                <BoxComponent msg='Mesaure failure!' />
-                <hr/>
-                <ul className="commentLister">
-                    {
-                        commentData.map((data) => {
-                        return <Comment
-                            author={data.author}
-                            txt={data.txt}
-                            date={data.date}
-                            key={data.key}
-                        />
-                        })
-                    }
-                </ul>
-                <Clock />
-                <NameForm />
+                <div className="tempAppBtn" onClick={this.toggleTempApp}>Temperature App</div>
+                {this.state.isTempAppVisible ? (
+                    <TemperatureApp />
+                ) : (
+                    <div>
+                        <BoxComponent msg='Hello my friend!' />
+                        <BoxComponent msg='Mesaure failure!' />
+                        <hr/>
+                        <ul className="commentLister">
+                            {
+                                commentData.map((data) => {
+                                return <Comment
+                                    author={data.author}
+                                    txt={data.txt}
+                                    date={data.date}
+                                    key={data.key}
+                                />
+                                })
+                            }
+                        </ul>
+                        <Clock />
+                        <NameForm />
+                    </div>
+                )
+                }
             </div>
       );
     }
