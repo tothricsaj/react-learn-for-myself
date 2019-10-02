@@ -45,7 +45,7 @@ class App extends React.Component{
         this.toggleTempApp = this.toggleTempApp.bind(this);
         this.state = {
             isMenuVisible: false,
-            isTempAppVisible: false,
+            isTempAppVisible: true,
         };
     }
 
