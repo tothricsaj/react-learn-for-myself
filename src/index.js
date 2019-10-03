@@ -2,11 +2,38 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class FancyBorder extends React.Component {
+    constructor(pros) {
+        super(pros);
+    }
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    render() {
+        return (
+            <div className={'FancyBorder FancyBorder-' + this.props.color}>
+                {this.props.children}
+            </div>
+        );
+    }
+}
+
+class Main extends React.Component {
+    render() {
+        return (
+            <div>
+                <FancyBorder color={'blue'}>
+                    <h2>Hello World!!</h2>
+                    <p>Innumine patris...:)</p>
+                </FancyBorder>
+
+                <FancyBorder color={'green'}>
+                    <h2>Welcome my Practice project</h2>
+                </FancyBorder>
+            </div>
+        );
+    }
+}
+
+// ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById('root'));
+

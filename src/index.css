@@ -8,6 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   color: orange;
+  background-color: #282c34;
 }
 
 code {
@@ -17,4 +18,18 @@ code {
 
 h2 {
   margin: 0;
+}
+
+.FancyBorder {
+  border: 3px solid black;
+  margin: 15px;
+  padding: 5px;
+}
+
+.FancyBorder-blue {
+  border-color: lightskyblue;
+}
+
+.FancyBorder-green {
+  border-color: lightseagreen;
 }
