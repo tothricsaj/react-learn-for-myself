@@ -1,7 +1,7 @@
-class Test extends React.Component {
+class ArctilceList extends React.Component {
     render() {
         return(
-            <div>
+            <div className="articleWraper">
                 Test Text
             </div>
         )
@@ -9,6 +9,6 @@ class Test extends React.Component {
 }
 
 ReactDOM.render(
-    <Test />,
+    <ArctilceList />,
     document.querySelector('#app')
 )

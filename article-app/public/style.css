@@ -1,0 +1,20 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: wheat;
+}
+
+.articleTitle {
+    width: 200px;
+    margin: 15px auto;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.articleWraper {
+    width: 70vw;
+    margin: 0 auto;
+    padding: 15px;
+    border-left: 5px solid white ;
+}
