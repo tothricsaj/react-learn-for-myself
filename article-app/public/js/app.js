@@ -11,13 +11,18 @@ class ArticleList extends React.Component {
 class Article extends React.Component {
     render() {
         return(
-            <div>
-                <h2>Article title</h2>
-                <div>
+            <div className="article">
+                <div className="articleTitleWrapper">
+                    <h2 className="articleTitle">
+                        Article title Article title Article titleArticle titleArticle titleArticle titleArticle titleArticle titleArticle titleArticle titleArticle titleArticle title
+                    </h2>
+                </div>
+                <div className="delimiter"></div>
+                <div className="articleLead">
                     Lead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead Text
                 </div>
-                <p>Author: Kitty Man</p>
-                <p>2020/07/14</p>
+                <p className="articleAuthor">Author: Kitty Man</p>
+                <p className="articleDate">2020/07/14</p>
             </div>
         )
     }
