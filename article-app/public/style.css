@@ -25,15 +25,36 @@ html, body {
     border-left: 5px solid white ;
 }
 
+.articleHead {
+    position: relative;
+}
+
+.articleImage {
+    width: 100%;
+}
+
+.articleImage img {
+    width: 100%;
+}
+
 .articleTitleWrapper {
     background-color: cadetblue;
-    margin-bottom: 20px;
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .articleTitle {
     display: inline;
     margin: 0;
-    padding: 10px;
+    padding: 5px;
     background-color: wheat;
     line-height: 35px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.articleTitle:hover {
+    color: cadetblue;
 }
