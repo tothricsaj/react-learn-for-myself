@@ -41,7 +41,6 @@ class Article extends React.Component {
                         </h2>
                     </div>
                 </div>
-                <div className="delimiter"></div>
                 <div className="articleLead">
                     {this.props.lead}
                 </div>

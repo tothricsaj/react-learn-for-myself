@@ -4,10 +4,16 @@ html, body {
     background-color: wheat;
 }
 
-.delimiter {
+.article {
     width: 100%;
     border-bottom: 1px solid white;
     margin: 15px 0;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.article:hover {
+    box-shadow: 8px 5px 2px 1px rgba(0, 0, 255, .2);
 }
 
 .AppTitle {
