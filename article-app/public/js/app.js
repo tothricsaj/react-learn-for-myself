@@ -1,8 +1,27 @@
 class ArticleList extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {articles: []}
+    }
+
+    componentDidMount() {
+        this.setState({articles: Seeds.articles})
+    }
+
     render() {
+        const articleList = this.state.articles.map(article => (
+            <Article
+                key={article.id}
+                image={article.image}
+                title={article.title}
+                lead={article.lead}
+                author={article.author}
+            />
+        ))
         return(
             <div className="articleWraper">
-                <Article />
+                {articleList}
             </div>
         )
     }
@@ -14,19 +33,19 @@ class Article extends React.Component {
             <div className="article">
                 <div className="articleHead">
                     <div className="articleImage">
-                        <img src="../images/evil_cat.jpg" />
+                        <img src={this.props.image} />
                     </div>
                     <div className="articleTitleWrapper">
                         <h2 className="articleTitle">
-                            Article title Article title Article titleArticle titleArticle titleArticle titleArticle titleArticle titleArticle titleArticle titleArticle titleArticle title
+                            {this.props.title}
                         </h2>
                     </div>
                 </div>
                 <div className="delimiter"></div>
                 <div className="articleLead">
-                    Lead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead Text
+                    {this.props.lead}
                 </div>
-                <p className="articleAuthor">Author: Kitty Man</p>
+                <p className="articleAuthor">Author: {this.props.author}</p>
             </div>
         )
     }
