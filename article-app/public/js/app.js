@@ -10,9 +10,12 @@ class ArticleList extends React.Component {
     }
 
     render() {
-        const articleList = this.state.articles.map(article => (
+        const articles = this.state.articles.sort((a, b) => b.clickCount - a.clickCount)
+
+        const articleList = articles.map((article, i) => (
             <Article
                 key={article.id}
+                classes={i === 0 ? 'article lead' : 'article'}
                 image={article.image}
                 title={article.title}
                 lead={article.lead}
@@ -30,7 +33,7 @@ class ArticleList extends React.Component {
 class Article extends React.Component {
     render() {
         return(
-            <div className="article">
+            <div className={this.props.classes}>
                 <div className="articleHead">
                     <div className="articleImage">
                         <img src={this.props.image} />
