@@ -27,7 +27,6 @@ class Article extends React.Component {
                     Lead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead TextLead Text
                 </div>
                 <p className="articleAuthor">Author: Kitty Man</p>
-                <p className="articleDate">2020/07/14</p>
             </div>
         )
     }
