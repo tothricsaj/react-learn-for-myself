@@ -11,8 +11,7 @@ class ArticleList extends React.Component {
     }
 
     handleClasses(id) {
-        return function () {
-            console.log('#' + id)
+        return function (obj) {
             document.querySelector('#' + id).classList.add('bigArticle')
         }
     }
@@ -28,6 +27,7 @@ class ArticleList extends React.Component {
                 image={article.image}
                 title={article.title}
                 lead={article.lead}
+                text={article.text}
                 author={article.author}
                 handleClasses={this.handleClasses('article-' + article.id)}
             />
@@ -57,6 +57,11 @@ class Article extends React.Component {
                 <div className="articleLead">
                     {this.props.lead}
                 </div>
+
+                <div className='articleText'>
+                    {this.props.text}
+                </div>
+
                 <p className="articleAuthor">Author: {this.props.author}</p>
             </div>
         )
