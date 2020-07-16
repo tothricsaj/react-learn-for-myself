@@ -11,7 +11,7 @@ class ArticleList extends React.Component {
     }
 
     handleClasses(id) {
-        return function (obj) {
+        return function () {
             const elem = document.querySelector('#' + id)
             elem.classList.contains('bigArticle')
             ? elem.classList.remove('bigArticle')
