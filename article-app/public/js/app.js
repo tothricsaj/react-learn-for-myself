@@ -3,10 +3,18 @@ class ArticleList extends React.Component {
         super(props)
 
         this.state = {articles: []}
+        this.handleClasses = this.handleClasses.bind(this)
     }
 
     componentDidMount() {
         this.setState({articles: Seeds.articles})
+    }
+
+    handleClasses(id) {
+        return function () {
+            console.log('#' + id)
+            document.querySelector('#' + id).classList.add('bigArticle')
+        }
     }
 
     render() {
@@ -16,10 +24,12 @@ class ArticleList extends React.Component {
             <Article
                 key={article.id}
                 classes={i === 0 ? 'article lead' : 'article'}
+                id={'article-' + article.id}
                 image={article.image}
                 title={article.title}
                 lead={article.lead}
                 author={article.author}
+                handleClasses={this.handleClasses('article-' + article.id)}
             />
         ))
         return(
@@ -33,7 +43,7 @@ class ArticleList extends React.Component {
 class Article extends React.Component {
     render() {
         return(
-            <div className={this.props.classes}>
+            <div id={this.props.id} className={this.props.classes} onClick={this.props.handleClasses}>
                 <div className="articleHead">
                     <div className="articleImage">
                         <img src={this.props.image} />
