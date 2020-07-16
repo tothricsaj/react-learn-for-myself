@@ -12,7 +12,10 @@ class ArticleList extends React.Component {
 
     handleClasses(id) {
         return function (obj) {
-            document.querySelector('#' + id).classList.add('bigArticle')
+            const elem = document.querySelector('#' + id)
+            elem.classList.contains('bigArticle')
+            ? elem.classList.remove('bigArticle')
+            : elem.classList.add('bigArticle')
         }
     }
 
